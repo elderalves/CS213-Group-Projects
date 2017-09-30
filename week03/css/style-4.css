@@ -1,9 +1,10 @@
 body { 
 	font-size: 16px; 
-	background-color: lightblue; 
 	color: white;
 	margin: 0;
 	padding: 0;
+	background-color: #176BB0; 
+	font-family: "BYUI Open Sans", "Open Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, sans-serif;
 }
 
 h1 { 
@@ -14,11 +15,15 @@ h1 {
 }
 
 #title {
-    background-color: watermelon;
+    background-color: white;
 	padding: 10px;
+	color: #176BB0; 
 }
 
 #title h1 {
+	background: white url("../img/byui.jpg") no-repeat scroll top left;
+	padding-left: 230px;
+	height: 160px;
 	font-size: 48px; 
 	font-weight: bolder;
 	text-transform: uppercase;  
@@ -30,11 +35,16 @@ h1 {
 	margin: 0 10px;
 }
 
+.content {
+	background-color: #176BB0;
+}
+
 #text {
 	padding: 15px;
     float: right;
     width: 64%;
     height: 100vh;
+    background-color: indianred;
 }
 
 #sidebar {
@@ -45,7 +55,7 @@ h1 {
 
 #menuBar {
 	margin: 0 0 10px 0;
-	background-color: orange;
+
 }
 
 #menuBar ul {
@@ -63,13 +73,17 @@ h1 {
 	display:block;
 	padding:0 20px;	
 	color:#FFF;
+	border:solid orange 2px;
 	font-size:14px;
 	line-height: 40px;
+	font-style: italic;
 	text-decoration:none;
-	text-transform: uppercase;  
+	text-transform: lowercase;  
 }
 
 #menuBar ul li a:hover { 
 	background-color: lightblue; 
 	cursor: pointer;
+	border:solid blue 2px;
+	border-radius: 5px;
 }
