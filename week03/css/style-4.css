@@ -87,3 +87,8 @@ h1 {
 	border:solid blue 2px;
 	border-radius: 5px;
 }
+
+#bottom::after {
+    content: "Esteban Tundidor";
+    font-weight: 900;
+}

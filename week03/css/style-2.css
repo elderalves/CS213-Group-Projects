@@ -73,3 +73,8 @@ h1 {
 	background-color: #000000; 
 	cursor: pointer;
 }
+
+#bottom::after {
+    content: "Esteban Tundidor";
+    font-weight: 900;
+}
