@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
+<xsl:template match="directory">
+ <html>
+  <head>
+   <title>Teach 09 : Problem 3</title>
+  </head>
+  <body>
+   <table style="border-collapse: collapse;">
+    <thead style="border-top: 2px solid #000;border-bottom: 2px solid #000;">
+     <tr>
+      <th style="background-color: #307BB5;color: #fff;font-weight:normal;padding: 5px;">Name</th>
+      <th style="background-color: #307BB5;color: #fff;font-weight:normal;padding: 5px;">Size</th>
+      <th style="background-color: #307BB5;color: #fff;font-weight:normal;padding: 5px;">Type</th>
+     </tr>
+    </thead>
+    <tbody>
+     <xsl:for-each select="file">
+      <xsl:choose>
+       <xsl:when test="(position() = 2) or (position() = 4)">
+        <tr style="background-color:#E6E6E6;">
+         <td style="border: 1px solid black;padding: 5px;">
+          <xsl:value-of select="@name"/> <xsl:value-of select="position()" />
+         </td>
+         <td style="border: 1px solid black;padding: 5px;">
+          <xsl:value-of select="@size"/>
+         </td>
+         <td style="border: 1px solid black;padding: 5px;">
+          <xsl:value-of select="@type"/>
+         </td>
+        </tr>
+       </xsl:when>
+       <xsl:otherwise>
+        <tr>
+         <td style="border: 1px solid black;padding: 5px;"><xsl:value-of select="@name"/> <xsl:value-of select="position()" /></td>
+         <td style="border: 1px solid black;padding: 5px;"><xsl:value-of select="@size"/></td>
+         <td style="border: 1px solid black;padding: 5px;"><xsl:value-of select="@type"/></td>
+        </tr>
+       </xsl:otherwise>
+      </xsl:choose>
+     </xsl:for-each>
+    </tbody>
+   </table>
+  </body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
